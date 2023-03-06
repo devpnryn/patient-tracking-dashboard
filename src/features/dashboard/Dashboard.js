@@ -4,7 +4,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 import { Email, Alarm } from '@mui/icons-material';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import PatientDialogV3 from '../patientview/PatientDialogV3';
+import PatientDialogV4 from '../patientview/PatientDialogV4';
 
 
 const Dashboard = ({ patients }) => {
@@ -93,7 +93,7 @@ const Dashboard = ({ patients }) => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            {openDialog && <PatientDialogV3 open={openDialog} onClose={() => setOpenDialog(false)} patient={selectedPatient} />}
+            {openDialog && <PatientDialogV4 open={openDialog} onClose={() => setOpenDialog(false)} patient={selectedPatient} />}
             {showCallDialog && <Dialog open={showCallDialog} onClose={() => setShowCallDialog(false)}>
                 <DialogTitle>Call Patient</DialogTitle>
                 <DialogContent>
