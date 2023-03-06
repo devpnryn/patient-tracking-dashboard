@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import Dashboard from './features/dashboard/Dashboard';
 import { generateData_40 } from './utils/getData';
 import Footer from './features/footer/Footer';
-import Appbar_v2 from './features/appbar/Appbar_v2';
+import AppbarV2 from './features/appbar/AppbarV2';
 
 function App() {
   // let patients = generateRandomData()
@@ -13,7 +13,7 @@ function App() {
     return (
       <div className="App">
         {/* <Appbar /> */}
-        <Appbar_v2 />
+        <AppbarV2 />
         <Divider variant='middle' />
         <Dashboard patients={patients} />
         <ToastContainer position="bottom-right" />

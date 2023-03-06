@@ -15,7 +15,7 @@ import {
     TimelineDot,
 } from '@mui/lab';
 
-const PatientDialog_v3 = ({ open, onClose, patient }) => {
+const PatientDialogV3 = ({ open, onClose, patient }) => {
     const dialogTitleStyle = {
         textAlign: 'center',
         color: '#f50057', // set title color to pink
@@ -70,4 +70,4 @@ const PatientDialog_v3 = ({ open, onClose, patient }) => {
     );
 };
 
-export default PatientDialog_v3;
+export default PatientDialogV3;

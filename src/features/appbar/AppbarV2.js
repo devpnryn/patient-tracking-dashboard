@@ -33,7 +33,7 @@ const styles = {
     },
 };
 
-const Appbar_v2 = () => {
+const AppbarV2 = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     const [searchInput, setSearchInput] = useState("");
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -102,4 +102,4 @@ const Appbar_v2 = () => {
     );
 };
 
-export default Appbar_v2;
+export default AppbarV2;
