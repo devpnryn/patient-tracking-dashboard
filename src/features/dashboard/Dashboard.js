@@ -50,9 +50,10 @@ const Dashboard = ({ patients }) => {
     const notifyEmail = (patientName) => {
         toast.info(`Email sent to ${patientName}`);
     }
+
     return (
         <>
-            <TableContainer component={Paper} sx={{ marginBottom: "80px" }}>
+            <TableContainer component={Paper}>
                 <Table aria-label="dashboard table">
                     <TableHead>
                         <TableRow>

@@ -4,26 +4,47 @@ import { ToastContainer } from 'react-toastify';
 import Dashboard from './features/dashboard/Dashboard';
 import { generateData } from './utils/getData';
 import Footer from './features/footer/Footer';
-// import Footer_v2 from './features/footer/Footer_v2';
 import AppbarV2 from './features/appbar/AppbarV2';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import ThemeProvider from './ThemeProvider';
+import { useState } from 'react';
 
 function App() {
-  // let patients = generateRandomData()
-  // let patients = generateData_40()
+  // const [darkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // .dashboard-container {
+  //   flex-grow: 1;
+  //   overflow-y: auto;
+  //   padding: 16px;
+  // }
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  const theme = createTheme({
+    palette: {
+      mode: isDarkMode ? 'dark' : 'light',
+    },
+  });
+
+
   let patients = generateData()
-  if (patients.length > 0) {
-    return (
+
+  return (
+    <ThemeProvider theme={theme}>
       <div className="App">
-        <AppbarV2 />
+        <AppbarV2 toggleTheme={toggleTheme} />
         <Divider variant='middle' />
-        <Dashboard patients={patients} />
+        <div className="dashboard-container" style={{ flexGrow: 1, overflowY: 'auto' }}>
+          <Dashboard patients={patients} />
+        </div>
         <ToastContainer position="bottom-right" />
         <Footer />
-        {/* <Footer_v2 /> */}
       </div>
-    );
-  } else {
-    return <h1>Loading...</h1>
-  }
+    </ThemeProvider>
+  );
 }
+
 export default App;
