@@ -4,17 +4,17 @@ import { GitHub as GitHubIcon, LinkedIn as LinkedInIcon } from '@mui/icons-mater
 
 const styles = {
     footer: {
-        // marginTop: '80px',
+        marginTop: '80px',
         backgroundColor: '#212121',
         color: '#fff',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '10px',
-        // position: 'fixed',
-        // left: 0,
-        // bottom: 0,
-        // width: '100%',
+        position: 'fixed',
+        left: 0,
+        bottom: 0,
+        width: '100%',
     },
     iconButton: {
         color: '#fff',

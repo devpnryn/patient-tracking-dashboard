@@ -12,7 +12,6 @@ function App() {
   if (patients.length > 0) {
     return (
       <div className="App">
-        {/* <Appbar /> */}
         <AppbarV2 />
         <Divider variant='middle' />
         <Dashboard patients={patients} />

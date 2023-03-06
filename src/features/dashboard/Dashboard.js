@@ -24,10 +24,11 @@ const Dashboard = ({ patients }) => {
             if (p.id === patientId) {
                 if ((p.count + 1) > 2) {
                     p.count = 3
+                    p.status = "call now"
                     setShowCallDialog(true)
                     setPatientName(patientName)
                 } else {
-                    p.count = p.count + 1
+                    p.count += 1
                 }
             }
             return p;
@@ -51,15 +52,15 @@ const Dashboard = ({ patients }) => {
     }
     return (
         <>
-            <TableContainer component={Paper}>
+            <TableContainer component={Paper} sx={{ marginBottom: "80px" }}>
                 <Table minWidth={650} aria-label="dashboard table">
                     <TableHead>
                         <TableRow>
                             <TableCell>ID</TableCell>
                             <TableCell>Name</TableCell>
-                            <TableCell align="right">Time</TableCell>
-                            <TableCell align="right">Type</TableCell>
-                            <TableCell align="right">Actions</TableCell>
+                            <TableCell align="center">Time</TableCell>
+                            <TableCell align="center">Type</TableCell>
+                            <TableCell align="center">Actions</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -73,17 +74,18 @@ const Dashboard = ({ patients }) => {
                                         {patient.name}
                                     </Button>
                                 </TableCell>
-                                <TableCell align="right">{patient.time}</TableCell>
-                                <TableCell align="right">{patient.type}</TableCell>
-                                <TableCell align="right">
-                                    <Chip variant="outlined" size="small" label={patient.status === 'confirm' ? 'confirm' : 'remind'} />
+                                <TableCell align="center">{patient.time}</TableCell>
+                                <TableCell align="center">{patient.type}</TableCell>
+                                <TableCell align="center">
+                                    <Chip variant="outlined" style={{
+                                    }} size="small" label={patient.status === 'Confirmed' ? 'Coming' : 'Remind'} />
                                     <IconButton onClick={() => notifySMS(patient.name, patient.id)}>
-                                        <Alarm color={alarmColor} />
+                                        <Badge color="secondary" badgeContent={emailNotificationCount.find(p => p.id === patient.id)?.count}>
+                                            <Alarm color={alarmColor} />
+                                        </Badge>
                                     </IconButton>
                                     <IconButton onClick={() => notifyEmail(patient.name)}>
-                                        <Badge color="secondary" badgeContent={emailNotificationCount.find(p => p.id === patient.id)?.count}>
-                                            <Email />
-                                        </Badge>
+                                        <Email />
                                     </IconButton>
                                 </TableCell>
                             </TableRow>
@@ -91,8 +93,6 @@ const Dashboard = ({ patients }) => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            {/* {openDialog && <PatientDialog open={openDialog} onClose={() => setOpenDialog(false)} patient={selectedPatient} />} */}
-            {/* {openDialog && <PatientDialog_v2 open={openDialog} onClose={() => setOpenDialog(false)} patient={selectedPatient} />} */}
             {openDialog && <PatientDialogV3 open={openDialog} onClose={() => setOpenDialog(false)} patient={selectedPatient} />}
             {showCallDialog && <Dialog open={showCallDialog} onClose={() => setShowCallDialog(false)}>
                 <DialogTitle>Call Patient</DialogTitle>
@@ -105,6 +105,7 @@ const Dashboard = ({ patients }) => {
                 </DialogActions>
             </Dialog>
             }
+            {/* <Footer /> */}
         </>
 
     );
