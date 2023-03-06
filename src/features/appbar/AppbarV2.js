@@ -58,7 +58,7 @@ const AppbarV2 = ({ toggleTheme, isDarkMode }) => {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="fixed" top="0">
             <Toolbar>
                 <IconButton edge="start" color="inherit" onClick={handleMenuClick}>
                     <MenuIcon />
