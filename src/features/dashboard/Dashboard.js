@@ -53,7 +53,7 @@ const Dashboard = ({ patients }) => {
     return (
         <>
             <TableContainer component={Paper} sx={{ marginBottom: "80px" }}>
-                <Table minWidth={650} aria-label="dashboard table">
+                <Table aria-label="dashboard table">
                     <TableHead>
                         <TableRow>
                             <TableCell>ID</TableCell>
@@ -65,12 +65,12 @@ const Dashboard = ({ patients }) => {
                     </TableHead>
                     <TableBody>
                         {patients.map((patient) => (
-                            <TableRow key={patient.id} >
-                                <TableCell component="th" scope="row">
+                            <TableRow key={patient.id}>
+                                <TableCell component="th" scope="row" align="left">
                                     {patient.id}
                                 </TableCell>
-                                <TableCell>
-                                    <Button onClick={() => handleRowClick(patient)}>
+                                <TableCell align="left" sx={{ maxWidth: 60 }}>
+                                    <Button onClick={() => handleRowClick(patient)} sx={{ margin: 0, padding: 0 }}>
                                         {patient.name}
                                     </Button>
                                 </TableCell>

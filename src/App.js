@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import Dashboard from './features/dashboard/Dashboard';
 import { generateData } from './utils/getData';
 import Footer from './features/footer/Footer';
+// import Footer_v2 from './features/footer/Footer_v2';
 import AppbarV2 from './features/appbar/AppbarV2';
 
 function App() {

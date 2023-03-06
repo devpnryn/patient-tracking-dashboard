@@ -134,7 +134,8 @@ const generateData = () => {
 
         const patient = {
             id: i,
-            name: faker.name.findName(),
+            name: faker.name.fullName(),
+            // name: `Patient ${i}`,
             followUpDetails: [
                 { date: '2022-03-01', time: appointmentTimes[Math.floor(Math.random() * appointmentTimes.length)], status: followUpStatuses[Math.floor(Math.random() * followUpStatuses.length)] },
                 { date: '2022-03-08', time: appointmentTimes[Math.floor(Math.random() * appointmentTimes.length)], status: followUpStatuses[Math.floor(Math.random() * followUpStatuses.length)] },
