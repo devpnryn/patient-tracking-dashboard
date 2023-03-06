@@ -6,11 +6,6 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import AlarmOnIcon from '@mui/icons-material/AlarmOn';
-import { ListItemButton, ListItemIcon } from '@mui/material';
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
-import ListActions from '../list-actions/ListActions';
 import { Box } from '@mui/system';
 
 export default function PatientList() {

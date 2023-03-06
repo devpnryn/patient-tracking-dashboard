@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton, Badge, Chip } from '@mui/material';
 import { Email, Alarm } from '@mui/icons-material';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { generateData } from './utils/getData';
-import PatientDialog from './PatientView';
 import PatientView_v2 from './PatientView_v2';
 
 

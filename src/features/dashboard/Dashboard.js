@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton, Badge, Chip, DialogActions, Dialog, DialogTitle, DialogContent, Button } from '@mui/material';
 import { Email, Alarm } from '@mui/icons-material';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import PatientDialog from '../patientview/PatientDialog';
-import PatientDialog_v2 from '../patientview/PatientDialog_v2';
 import PatientDialog_v3 from '../patientview/PatientDialog_v3';
 
 

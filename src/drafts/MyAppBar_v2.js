@@ -3,7 +3,7 @@ import { AppBar, Toolbar, IconButton, Typography, InputBase, Avatar } from '@mui
 import { Menu as MenuIcon, Search as SearchIcon } from '@mui/icons-material';
 
 function MyAppBar_v2() {
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [setIsSearchOpen] = useState(false);
     const searchInputRef = useRef(null);
     function handleSearchClick() {
         setIsSearchOpen(true);

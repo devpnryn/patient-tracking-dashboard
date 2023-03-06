@@ -10,9 +10,7 @@ export default function ListActions({ confirmed = false }) {
         console.info('You clicked the Chip.');
     };
 
-    const handleDelete = () => {
-        console.info('You clicked the delete icon.');
-    };
+
     if (confirmed) {
         return <Stack direction="row" spacing={1}>
             <AlarmOnIcon sx={{ fill: "green" }} />

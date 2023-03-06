@@ -3,7 +3,6 @@ import {
     Dialog,
     DialogTitle,
     DialogContent,
-    DialogActions,
     Button,
     Typography,
 } from '@mui/material';
@@ -28,9 +27,7 @@ const PatientDialog_v3 = ({ open, onClose, patient }) => {
         right: '12px',
     };
 
-    const connectorStyle = {
-        backgroundColor: '#f50057', // set connector color to pink
-    };
+
 
     return (
         <Dialog open={open} onClose={onClose} fullWidth maxWidth="sm">
