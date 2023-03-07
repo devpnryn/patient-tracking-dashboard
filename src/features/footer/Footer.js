@@ -5,7 +5,7 @@ import { GitHub as GitHubIcon, LinkedIn as LinkedInIcon } from '@mui/icons-mater
 const styles = {
     footer: {
         zIndex: 9999,
-        marginTop: '80px',
+        // marginTop: '80px',
         backgroundColor: '#212121',
         color: '#fff',
         display: 'flex',

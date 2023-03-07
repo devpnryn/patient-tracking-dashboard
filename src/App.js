@@ -13,12 +13,6 @@ function App() {
   // const [darkMode, setDarkMode] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // .dashboard-container {
-  //   flex-grow: 1;
-  //   overflow-y: auto;
-  //   padding: 16px;
-  // }
-
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
@@ -37,11 +31,11 @@ function App() {
       <div className="App">
         <AppbarV2 toggleTheme={toggleTheme} />
         <Divider variant='middle' />
-        <div className="dashboard-container" style={{ flexGrow: 1, overflowY: 'auto' }}>
-          <Dashboard patients={patients} />
-        </div>
-        <ToastContainer position="bottom-right" />
+        {/* <div className="dashboard-container" style={{ flexGrow: 1, overflowY: 'auto' }}> */}
+        <Dashboard patients={patients} />
+        {/* </div> */}
         <Footer />
+        <ToastContainer position="bottom-right" />
       </div>
     </ThemeProvider>
   );

@@ -53,7 +53,7 @@ const Dashboard = ({ patients }) => {
 
     return (
         <>
-            <TableContainer component={Paper} style={{ marginBottom: '40px' }}>
+            <TableContainer component={Paper}>
                 <Table aria-label="dashboard table">
                     <TableHead>
                         <TableRow>
