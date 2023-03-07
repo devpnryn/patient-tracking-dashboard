@@ -19,7 +19,6 @@ const Dashboard = ({ patients }) => {
     const [showCallDialog, setShowCallDialog] = useState(false);
 
     const notifySMS = (patientName, patientId) => {
-        toast.success(`SMS sent to ${patientName}`);
         let copyOfNotificationCount = emailNotificationCount.map(p => {
             if (p.id === patientId) {
                 if ((p.count + 1) > 2) {
@@ -28,6 +27,7 @@ const Dashboard = ({ patients }) => {
                     setShowCallDialog(true)
                     setPatientName(patientName)
                 } else {
+                    toast.success(`SMS sent to ${patientName}`);
                     p.count += 1
                 }
             }
