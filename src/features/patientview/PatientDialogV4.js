@@ -111,7 +111,7 @@ const PatientDialogV4 = ({ open, onClose, patient }) => {
                 </DialogContent>
             )}
             <Button onClick={onClose} sx={{ position: 'absolute', top: 0, right: 0 }} style={closeButtonStyle}>
-                Close
+                X
             </Button>
         </Dialog>
     )
